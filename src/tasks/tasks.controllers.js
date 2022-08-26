@@ -1,10 +1,10 @@
 const todoDB = [
   {
     "id": 1,
-    "task": "Make work",
-    "status": "Not Done",
+    "task": "Dishes",
+    "status": false,
     "deadline": "Today",
-    "description": "Frida has to wash the dishes before dinner"
+    "description": "Gael has to wash the dishes before dinner"
   }
 ];
 
@@ -31,7 +31,7 @@ const createTask = (taskObj) => {
     const newTask = {
       id: 1,
       task: taskObj.task,
-      status: taskObj.status,
+      status: false,
       deadline: taskObj.deadline,
       description: taskObj.description,
     };
@@ -42,7 +42,7 @@ const createTask = (taskObj) => {
     const newTask = {
       id: todoDB[todoDB.length - 1].id + 1,
       task: taskObj.task,
-      status: taskObj.status,
+      status: false,
       deadline: taskObj.deadline,
       description: taskObj.description,
     };

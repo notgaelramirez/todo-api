@@ -22,8 +22,8 @@ const getById = (req, res ) =>{
 
 const createNew = (req, res) =>{
   const taskObj = req.body
-  // The task description is optional
-  if(taskObj.task && taskObj.status && taskObj.deadline){
+  // The task description is optional and the status is false by default
+  if(taskObj.task && taskObj.deadline){
     createTask(taskObj)
     res.status(200).json({message: 'Ok'})
   } else{
@@ -34,7 +34,7 @@ const createNew = (req, res) =>{
 const updateById = (req, res) =>{
   const id = Number(req.params.id)
   const taskObj = req.body
-  if(taskObj.task && taskObj.status && taskObj.deadline && taskObj.description){
+  if(taskObj.task && taskObj.deadline){
     if(verifyID(id)){
       updateTask(id, taskObj)
       res.status(200).json({message: 'Updated.'})

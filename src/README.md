@@ -1,25 +1,20 @@
 # Order
 
-1. Definir las rutas
-2. Definir los verbos de cada ruta
+Routes: 
 
-/users
-- GET
-- POST 
+'/api/v1/tasks' :
+  GET: Responses with the account of tasks and the tasks. 
 
-/users/:id
-- GET
-- PUT
-- PATCH
-- DELETE
+  POST: Requires a body with an object that contains:
+        Task, deadline, status (optional) and description (optional).
 
-3. Crear los controladores
-```javascript
-    const getAllUsers = () =>{
-      return userDB
-    }
-```
+'/api/v1/tasks/:id' :
+  GET: Responses with the especific task that is send in the URL parameters.
 
-4. Crear los servicios (todo lo que maneja request y response)
-5. Crear las rutas
+  PUT: Updates the task, it can be used for changing the  status from false to true. Requires an body with an object that contains the new task and the deadline.
+
+  DELETE: Eliminates the task.
+
+
+  
 
