@@ -8,7 +8,7 @@ const todoDB = [
   }
 ];
 
-//? Starts with one task for test purposes
+//? Starts with one task for testing purposes
 
 /*
   task: "",
